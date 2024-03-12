@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            *{
+                background-image: url('back.jpeg');
+                background-size: cover;
+                
+
+
+            }
+
+           
+        </style>
+        <script>
+            function validate()
+            {
+                var x=document.getElementById("user").value;
+                
+                var e=/^[a-zA-Z]/;
+                
+                if(e.test(x))
+                {
+                    
+                }
+                else{
+                    alert("uh oh enter  again!!!");
+                }
+                
+            }
+            function val()
+            {
+                var pw=document.getElementById("pw").value;
+                var h=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+                if(h.test(pw))
+                {
+
+                }
+                else
+                {
+                    alert("enter valid pw");
+                }      
+            }
+
+        </script>
+        
+    </head>
+    <body>
+       
+            
+        
+        <form id="login" class="form">
+            <div class="container">
+                <center>
+                    <h1 id="lp">login page</h1>
+                </center>
+                <label for="user">USERNAME</label>
+                <input type="text" placeholder="enter username" name="username" id="user" onfocusout="validate()"><br>
+                <label for="pw">PASSWORD</label>
+                <input type="password" placeholder="enter password" name="password" id="pw" onfocusout="val()" required><br>
+                <center>
+                    <button type="submit" onclick="alert('logged in successfully')" style="color: blueviolet;">LOGIN</button><br>
+                </center>
+                <input type="checkbox" checked="checked">REMEMBER ME <br>                
+                <!-- <button type="button" class="cancelbtn">CANCEL</button> -->
+                <a href="forgotpw.html">FORGOT PASSWORD!!</a><br>  
+                <small>new user?</small>
+                <a href="registration.html">sign up</a>              
+            </div>
+            
+        </form >
+        
+        <!-- <form action="registration.html" id="su" class="form">
+            <input type="submit" value="Sign Up">
+        </form> -->
+        
+
+    </body>
+</html>
