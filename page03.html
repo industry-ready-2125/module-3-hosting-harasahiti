@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <style>
+            *{
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVL_sC17xW6uOW2cFIcJLSz2t-hYEYw8rJ5w&usqp=CAU');
+             }
+             .container
+             {
+                align-items: center;
+                text-align: center;
+             }
+        </style>
+        <script>
+            function validate()
+            {
+                var x=document.getElementById("name").value;
+                var e=/^[a-zA-Z]/;
+                if(e.test(x))
+                {
+                    alert("correct!!");
+                }
+                else{
+                    alert("uh oh enter  again!!!");
+                }
+            }
+            function val()
+            {
+                var pw=document.getElementById("pw").value;
+
+                var h=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+                if(h.test(pw))
+                {
+
+                }
+                else
+                {
+                    alert("enter valid pw");
+                }
+            }
+            function valp()
+            {
+                var pw=document.getElementById("pw").value;
+                var rpw=document.getElementById("rpw").value;
+                if(pw==rpw)
+                {
+
+                }
+                else
+                {
+                    alert("password shoulkd match with above");
+                }
+
+            }
+            function phn()
+            {
+                var num=document.getElementById("phnno").value;
+                var ph=/^[0-9]{10}/;
+                if(ph.test(num)){
+                }
+                else{
+                    alert("enter valid phn number");
+                }
+            }
+            function email()
+            {
+                var mail=documet.getElementById("mail").value;
+                var email= /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if(email.test(num)){
+                }
+                else{
+                    alert("enter valid email");
+                }
+
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <center><h1>REGISTARTION FORM</h1></center>
+        <form action="submit.html">
+            <div class="container">
+                <label for="name">USERNAME:</label>
+                <input type="text" placeholder="enter your username" name="name" id="name" onfocusout="validate()"><br><br>
+                
+                <label for="mail">EMAIL:</label>
+                <input type="text" placeholder="enter your email" name="mail" id="mail" required><br><br>
+                
+                <label for="phnno">PHONE NUMBER</label>
+                <input type="number" placeholder="enter your phone number" name="phnno" id="phnno" required><br><br>
+                
+                <label for="dob">DATE OF BIRTH</label>
+                <input type="date" placeholder="Enter date of birth" name="dob" id="dob" required><br><br>
+                
+                <label for="add">ADDRESS:</label>
+                <input type="text" placeholder="enter address" name="add" id="add" required ><br><br>
+                
+                <label for="gender">GENDER:</label>
+                <select name="gender" id="gender">
+                    <option value="male">MALE</option>
+                    <option value="female">FEMALE</option>
+                    <option value="other">OTHER</option>
+                </select><br><br>
+                <label for="pw">PASSWORD</label>
+                <input type="password" placeholder="enter password" name="pw" id="pw" onfocusout="val()" required><br><br>
+                <label for="rpw">RE ENTER PASSWORD</label>
+                <input type="password" placeholder="re enter password" name="rpw" id="rpw" onfocusout="valp()" required><br><br>
+                <label for="sub">SIGN UP</label>
+                <input type="submit" name="sub" id="sub" >
+                
+
+
+
+            </div>
+        </form>
+    </body>
+</html>
